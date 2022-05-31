@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driverClassName: "net.sf.log4jdbc.sql.jdbcapi.DriverSpy"
+    url: "jdbc:log4jdbc:mariadb://localhost:3306/test?characterEncoding=UTF-8&serverTimezone=UTC"
+    hikari:
+      username: "root"
+      password: "root"
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+server:
+  port: 28080
+
+
+logging:
+  level:
+    root: ERROR
+    com.cu.template: DEBUG
+    org.springframework: INFO
+    org.springframework.security: DEBUG
+    log4jdbc.log4j2: INFO
